@@ -1,0 +1,141 @@
+.product-page {
+  padding: 24px;
+  max-width: 1126px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: #6b6375;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.2s;
+}
+
+.back-link:hover {
+  color: #aa3bff;
+}
+
+.product-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.product-gallery {
+  position: sticky;
+  top: 88px;
+  height: fit-content;
+}
+
+.product-details {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.product-details .product-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #08060d;
+  margin: 0;
+}
+
+.product-subtitle {
+  font-size: 16px;
+  color: #6b6375;
+  margin: 0;
+}
+
+.product-rating {
+  font-size: 16px;
+  color: #aa3bff;
+}
+
+.product-price {
+  font-size: 32px;
+  font-weight: 700;
+  color: #08060d;
+  margin: 8px 0;
+}
+
+.add-to-cart-btn {
+  padding: 16px 32px;
+  background: #aa3bff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+  margin: 8px 0 16px;
+  width: fit-content;
+}
+
+.add-to-cart-btn:hover:not(:disabled) {
+  background: #8a2be2;
+}
+
+.add-to-cart-btn:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.add-to-cart-btn.in-cart {
+  background: #6b6375;
+  cursor: default;
+}
+
+.product-not-found {
+  text-align: center;
+  padding: 80px 24px;
+}
+
+.product-not-found h2 {
+  margin-bottom: 16px;
+}
+
+.product-not-found a {
+  color: #aa3bff;
+  text-decoration: none;
+}
+
+.product-not-found a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .product-content {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .product-gallery {
+    position: static;
+  }
+
+  .product-details .product-title {
+    font-size: 24px;
+  }
+
+  .product-price {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 375px) {
+  .product-page {
+    padding: 16px;
+  }
+
+  .product-details .product-title {
+    font-size: 20px;
+  }
+
+  .product-price {
+    font-size: 24px;
+  }
+}

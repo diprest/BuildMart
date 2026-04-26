@@ -1,0 +1,148 @@
+.cart-page {
+  padding: 24px;
+  max-width: 1126px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.cart-header h1 {
+  font-size: 32px;
+  margin: 0;
+}
+
+.clear-btn {
+  background: none;
+  border: 1px solid #e5e4e7;
+  padding: 8px 16px;
+  border-radius: 6px;
+  color: #6b6375;
+  font-size: 14px;
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.clear-btn:hover {
+  border-color: #aa3bff;
+  color: #aa3bff;
+}
+
+.cart-content {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 32px;
+  align-items: start;
+}
+
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.cart-summary {
+  background: #fff;
+  border: 1px solid #e5e4e7;
+  border-radius: 12px;
+  padding: 20px;
+  position: sticky;
+  top: 88px;
+}
+
+.cart-summary h2 {
+  font-size: 18px;
+  margin: 0 0 16px;
+}
+
+.summary-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #6b6375;
+}
+
+.summary-row.discount {
+  color: #2e7d32;
+}
+
+.summary-row.total {
+  font-size: 18px;
+  font-weight: 700;
+  color: #08060d;
+  padding-top: 8px;
+  border-top: 1px solid #e5e4e7;
+}
+
+.cart-empty {
+  text-align: center;
+  padding: 80px 24px;
+}
+
+.cart-empty h2 {
+  font-size: 24px;
+  margin: 0 0 8px;
+}
+
+.cart-empty p {
+  color: #6b6375;
+  margin: 0 0 24px;
+}
+
+.back-to-catalog-btn {
+  display: inline-block;
+  padding: 12px 32px;
+  background: #aa3bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.back-to-catalog-btn:hover {
+  background: #8a2be2;
+}
+
+@media (max-width: 768px) {
+  .cart-content {
+    grid-template-columns: 1fr;
+  }
+
+  .cart-summary {
+    position: static;
+  }
+
+  .cart-header h1 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 375px) {
+  .cart-page {
+    padding: 16px;
+  }
+
+  .cart-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .cart-header h1 {
+    font-size: 20px;
+  }
+}
