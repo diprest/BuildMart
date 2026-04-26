@@ -4,10 +4,11 @@ import products from '../data/products';
 import './CatalogPage.css';
 
 function CatalogPage() {
-  const [sort, setSort] = useState('default');
+  const [sort, setSort] = useState('name-asc');
   const [minPrice, setMinPrice] = useState('');
   const [maxPrice, setMaxPrice] = useState('');
   const [minRating, setMinRating] = useState('');
+  const [filtersOpen, setFiltersOpen] = useState(false);
 
   const filtered = useMemo(() => {
     let result = [...products];
@@ -36,67 +37,126 @@ function CatalogPage() {
         result.sort((a, b) => b.price - a.price);
         break;
       default:
-        break;
+        result.sort((a, b) => a.title.localeCompare(b.title));
     }
 
     return result;
   }, [sort, minPrice, maxPrice, minRating]);
 
+  const clearFilters = () => {
+    setMinPrice('');
+    setMaxPrice('');
+    setMinRating('');
+  };
+
+  const hasActiveFilters = minPrice || maxPrice || minRating;
+
   return (
     <div className="catalog-page">
-      <aside className="filters">
-        <h2>Фильтры</h2>
-
-        <div className="filter-group">
-          <label>Сортировка</label>
-          <select value={sort} onChange={(e) => setSort(e.target.value)}>
-            <option value="default">По умолчанию</option>
-            <option value="name-asc">Название А–Я</option>
-            <option value="name-desc">Название Я–А</option>
-            <option value="price-asc">Цена по возрастанию</option>
-            <option value="price-desc">Цена по убыванию</option>
-          </select>
+      <div className="catalog-header">
+        <div className="catalog-title-section">
+          <h1 className="catalog-title">Building Materials</h1>
+          <p className="catalog-subtitle">Premium construction supplies for all your projects</p>
         </div>
-
-        <div className="filter-group">
-          <label>Цена</label>
-          <div className="price-inputs">
-            <input
-              type="number"
-              placeholder="От"
-              value={minPrice}
-              onChange={(e) => setMinPrice(e.target.value)}
-            />
-            <input
-              type="number"
-              placeholder="До"
-              value={maxPrice}
-              onChange={(e) => setMaxPrice(e.target.value)}
-            />
+        <div className="catalog-actions">
+          <div className="actions-left">
+            <button
+              className="toggle-filters-btn"
+              onClick={() => setFiltersOpen(!filtersOpen)}
+            >
+              {filtersOpen ? 'Hide Filters' : 'Show Filters'}
+            </button>
+            <span className="products-count">Showing {filtered.length} products</span>
+          </div>
+          <div className="actions-right">
+            <span className="sort-label">Sort by:</span>
+            <select
+              className="sort-select"
+              value={sort}
+              onChange={(e) => setSort(e.target.value)}
+            >
+              <option value="name-asc">Name (A-Z)</option>
+              <option value="name-desc">Name (Z-A)</option>
+              <option value="price-asc">Price: Low to High</option>
+              <option value="price-desc">Price: High to Low</option>
+            </select>
           </div>
         </div>
+      </div>
 
-        <div className="filter-group">
-          <label>Минимальный рейтинг</label>
-          <input
-            type="number"
-            placeholder="От 0 до 5"
-            min="0"
-            max="5"
-            step="0.1"
-            value={minRating}
-            onChange={(e) => setMinRating(e.target.value)}
-          />
+      {filtersOpen && (
+        <div className="filters-panel">
+          <div className="filter-row">
+            <div className="filter-group">
+              <label className="filter-label">Minimum Rating</label>
+              <div className="rating-options">
+                <label className="rating-option">
+                  <input
+                    type="radio"
+                    name="rating"
+                    value="5"
+                    checked={minRating === '5'}
+                    onChange={(e) => setMinRating(e.target.value)}
+                  />
+                  <span>5+ Stars</span>
+                </label>
+                <label className="rating-option">
+                  <input
+                    type="radio"
+                    name="rating"
+                    value="4"
+                    checked={minRating === '4'}
+                    onChange={(e) => setMinRating(e.target.value)}
+                  />
+                  <span>4+ Stars</span>
+                </label>
+                <label className="rating-option">
+                  <input
+                    type="radio"
+                    name="rating"
+                    value="3"
+                    checked={minRating === '3'}
+                    onChange={(e) => setMinRating(e.target.value)}
+                  />
+                  <span>3+ Stars</span>
+                </label>
+              </div>
+            </div>
+            <div className="filter-group">
+              <label className="filter-label">Price Range</label>
+              <div className="price-inputs">
+                <input
+                  type="number"
+                  placeholder="Min"
+                  value={minPrice}
+                  onChange={(e) => setMinPrice(e.target.value)}
+                />
+                <input
+                  type="number"
+                  placeholder="Max"
+                  value={maxPrice}
+                  onChange={(e) => setMaxPrice(e.target.value)}
+                />
+              </div>
+            </div>
+            {hasActiveFilters && (
+              <button className="clear-filters-btn" onClick={clearFilters}>
+                Clear All Filters
+              </button>
+            )}
+          </div>
         </div>
-      </aside>
+      )}
 
-      <main className="products-grid">
-        {filtered.map((product) => (
-          <ProductCard key={product.id} product={product} />
-        ))}
-        {filtered.length === 0 && (
-          <p className="no-results">Товары не найдены</p>
-        )}
+      <main className="catalog-main">
+        <div className="products-grid">
+          {filtered.map((product) => (
+            <ProductCard key={product.id} product={product} />
+          ))}
+          {filtered.length === 0 && (
+            <p className="no-results">No products found</p>
+          )}
+        </div>
       </main>
     </div>
   );
