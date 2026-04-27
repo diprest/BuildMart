@@ -11,9 +11,9 @@ function App() {
   return (
     <CartProvider>
       <BrowserRouter>
-        <div className="app">
+        <div className="bm-app">
           <Header />
-          <main className="main-content">
+          <main className="bm-main">
             <Routes>
               <Route path="/" element={<CatalogPage />} />
               <Route path="/product/:id" element={<ProductPage />} />

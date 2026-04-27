@@ -17,7 +17,7 @@ function PromoCode({ onApply }) {
       setSuccess(true);
       onApply(10);
     } else {
-      setError('Неверный промокод');
+      setError('Invalid promo code');
       setSuccess(false);
     }
   };
@@ -29,21 +29,22 @@ function PromoCode({ onApply }) {
   };
 
   return (
-    <div className="promo-code">
-      <div className="promo-input-row">
+    <div className="bm-promo">
+      <p className="bm-promo__title">Have a promo code?</p>
+      <div className="bm-promo__row">
         <input
           type="text"
-          placeholder="Промокод"
+          placeholder="Enter promo code"
           value={code}
           onChange={handleChange}
-          className="promo-input"
+          className="bm-promo__input"
         />
-        <button onClick={handleApply} className="promo-btn">
-          Применить
+        <button onClick={handleApply} className="bm-promo__btn">
+          Apply
         </button>
       </div>
-      {error && <p className="promo-error">{error}</p>}
-      {success && <p className="promo-success">Промокод применён: −10%</p>}
+      {error && <p className="bm-promo__error">{error}</p>}
+      {success && <p className="bm-promo__success">Promo code applied: -10%</p>}
     </div>
   );
 }

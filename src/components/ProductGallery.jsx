@@ -15,13 +15,13 @@ function ProductGallery({ images, title }) {
   return (
     <div className="gallery">
       <div className="gallery-main">
-        <img src={images[current]} alt={`${title} - изображение ${current + 1}`} />
+        <img src={images[current]} alt={`${title} - image ${current + 1}`} />
         {images.length > 1 && (
           <>
-            <button className="gallery-btn prev" onClick={prev} aria-label="Предыдущее">
+            <button className="gallery-btn prev" onClick={prev} aria-label="Previous">
               ‹
             </button>
-            <button className="gallery-btn next" onClick={next} aria-label="Следующее">
+            <button className="gallery-btn next" onClick={next} aria-label="Next">
               ›
             </button>
           </>
@@ -35,7 +35,7 @@ function ProductGallery({ images, title }) {
               className={`gallery-thumb ${idx === current ? 'active' : ''}`}
               onClick={() => setCurrent(idx)}
             >
-              <img src={img} alt={`Миниатюра ${idx + 1}`} />
+              <img src={img} alt={`Thumbnail ${idx + 1}`} />
             </button>
           ))}
         </div>

@@ -1,4 +1,4 @@
-.cart-item {
+.bm-cart-item {
   display: flex;
   gap: 16px;
   padding: 16px;
@@ -7,7 +7,7 @@
   border-radius: 12px;
 }
 
-.cart-item-image {
+.bm-cart-item__image {
   width: 100px;
   height: 75px;
   flex-shrink: 0;
@@ -16,18 +16,18 @@
   background: #f4f3ec;
 }
 
-.cart-item-image img {
+.bm-cart-item__image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.cart-item-info {
+.bm-cart-item__info {
   flex: 1;
   min-width: 0;
 }
 
-.cart-item-title {
+.bm-cart-item__title {
   font-size: 16px;
   font-weight: 600;
   color: #08060d;
@@ -36,36 +36,36 @@
   margin-bottom: 4px;
 }
 
-.cart-item-title:hover {
-  color: #aa3bff;
+.bm-cart-item__title:hover {
+  color: #ff5a0a;
 }
 
-.cart-item-subtitle {
+.bm-cart-item__subtitle {
   font-size: 14px;
   color: #6b6375;
   margin: 0 0 8px;
 }
 
-.cart-item-price {
+.bm-cart-item__price {
   font-size: 14px;
   color: #6b6375;
   margin: 0;
 }
 
-.cart-item-controls {
+.bm-cart-item__controls {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   gap: 8px;
 }
 
-.quantity-controls {
+.bm-cart-item__quantity {
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
-.quantity-controls button {
+.bm-cart-item__quantity button {
   width: 32px;
   height: 32px;
   border: 1px solid #e5e4e7;
@@ -76,25 +76,25 @@
   transition: background 0.2s, border-color 0.2s;
 }
 
-.quantity-controls button:hover {
+.bm-cart-item__quantity button:hover {
   background: #f4f3ec;
-  border-color: #aa3bff;
+  border-color: #ff5a0a;
 }
 
-.quantity-controls span {
+.bm-cart-item__quantity span {
   min-width: 24px;
   text-align: center;
   font-weight: 600;
 }
 
-.cart-item-total {
+.bm-cart-item__total {
   font-size: 16px;
   font-weight: 700;
   color: #08060d;
   margin: 0;
 }
 
-.remove-btn {
+.bm-cart-item__remove {
   background: none;
   border: none;
   color: #6b6375;
@@ -104,21 +104,21 @@
   padding: 0;
 }
 
-.remove-btn:hover {
-  color: #aa3bff;
+.bm-cart-item__remove:hover {
+  color: #ff5a0a;
 }
 
 @media (max-width: 375px) {
-  .cart-item {
+  .bm-cart-item {
     flex-wrap: wrap;
   }
 
-  .cart-item-image {
+  .bm-cart-item__image {
     width: 80px;
     height: 60px;
   }
 
-  .cart-item-controls {
+  .bm-cart-item__controls {
     width: 100%;
     flex-direction: row;
     justify-content: space-between;

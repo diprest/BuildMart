@@ -1,22 +1,25 @@
 :root {
-  --color-primary: #ff4b00;
-  --color-primary-hover: #e64300;
+  --color-primary: #ff5a0a;
+  --color-primary-hover: #e84f00;
 
-  --color-text: #071126;
-  --color-muted: #5f6b7a;
+  --color-text: #0b1730;
+  --color-muted: #6b7280;
 
   --color-border: #d9dee7;
-  --color-border-light: #edf0f5;
+  --color-border-light: #eceff4;
 
-  --color-page-bg: #ffffff;
-  --color-card-bg: #ffffff;
+  --color-surface: #ffffff;
+  --color-background: #ffffff;
+
+  --color-placeholder: #9aa3b2;
 
   --color-footer-bg: #0f1826;
   --color-footer-text: #ffffff;
-  --color-footer-muted: #b6c0cf;
+  --color-footer-muted: #b8c0cf;
 
-  --color-star: #f7b500;
-  --color-danger: #ff3b30;
+  --color-star: #f6b400;
+
+  --color-card-bg: #ffffff;
 }
 
 * {
@@ -29,7 +32,7 @@ body {
   font-size: 16px;
   line-height: 1.5;
   color: var(--color-muted);
-  background: var(--color-page-bg);
+  background: var(--color-background);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -40,22 +43,26 @@ body {
   flex-direction: column;
 }
 
-.app {
+.bm-app {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
-.main-content {
+.bm-main {
   flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 a {
   color: inherit;
+  text-decoration: none;
 }
 
 button {
   font-family: inherit;
+  cursor: pointer;
 }
 
 input, select {

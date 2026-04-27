@@ -15,8 +15,8 @@ function ProductPage() {
   if (!product) {
     return (
       <div className="product-not-found">
-        <h2>Товар не найден</h2>
-        <Link to="/">Вернуться в каталог</Link>
+        <h2>Product not found</h2>
+        <Link to="/">Back to catalog</Link>
       </div>
     );
   }
@@ -27,7 +27,7 @@ function ProductPage() {
 
   return (
     <div className="product-page">
-      <Link to="/" className="back-link">← Назад в каталог</Link>
+      <Link to="/" className="back-link">← Back to catalog</Link>
 
       <div className="product-content">
         <div className="product-gallery">
@@ -38,21 +38,21 @@ function ProductPage() {
           <h1 className="product-title">{product.title}</h1>
           <p className="product-subtitle">{product.subtitle}</p>
           <div className="product-rating">★ {product.rating}</div>
-          <p className="product-price">{product.price.toLocaleString()} ₽</p>
+          <p className="product-price">${product.price.toLocaleString()}</p>
 
           <button
             className={`add-to-cart-btn ${inCart ? 'in-cart' : ''}`}
             onClick={handleAdd}
             disabled={inCart}
           >
-            {inCart ? 'Уже в корзине' : 'Добавить в корзину'}
+            {inCart ? 'Already in cart' : 'Add to cart'}
           </button>
 
-          <Accordion title="Расширенное описание">
+          <Accordion title="Extended description">
             <p>{product.extendedDescription}</p>
           </Accordion>
 
-          <Accordion title="Описание">
+          <Accordion title="Description">
             <p>{product.description}</p>
           </Accordion>
         </div>

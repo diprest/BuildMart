@@ -24,3 +24,16 @@ dist-ssr
 *.sw?
 RULES.md
 buildmart_figma_screens/
+
+# Figma reference files
+figma-source/
+figma-site-dump/
+
+# Scripts
+scripts/
+
+# AI rules (Claude Code)
+.claude/
+
+# Tests
+BuildMart_test/
