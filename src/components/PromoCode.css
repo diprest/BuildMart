@@ -1,52 +1,11 @@
-.bm-promo {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.bm-promo__row {
-  display: flex;
-  gap: 8px;
-}
-
-.bm-promo__input {
-  flex: 1;
-  padding: 12px 16px;
-  border: 1px solid #e5e4e7;
-  border-radius: 8px;
-  font-size: 14px;
-  outline: none;
-  transition: border-color 0.2s;
-}
-
-.bm-promo__input:focus {
-  border-color: #ff5a0a;
-}
-
-.bm-promo__btn {
-  padding: 12px 24px;
-  background: #ff5a0a;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  font-size: 14px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background 0.2s;
-}
-
-.bm-promo__btn:hover {
-  background: #e84f00;
-}
-
 .bm-promo__error {
-  color: #e53935;
+  color: #ef4444;
   font-size: 14px;
-  margin: 0;
+  margin: 8px 0 0;
 }
 
 .bm-promo__success {
-  color: #2e7d32;
+  color: #22c55e;
   font-size: 14px;
-  margin: 0;
+  margin: 8px 0 0;
 }

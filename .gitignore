@@ -28,6 +28,7 @@ buildmart_figma_screens/
 # Figma reference files
 figma-source/
 figma-site-dump/
+figma-specs/
 
 # Scripts
 scripts/

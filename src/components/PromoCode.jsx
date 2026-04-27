@@ -31,7 +31,7 @@ function PromoCode({ onApply }) {
   return (
     <div className="bm-promo">
       <p className="bm-promo__title">Have a promo code?</p>
-      <div className="bm-promo__row">
+      <div className="bm-promo__form">
         <input
           type="text"
           placeholder="Enter promo code"
@@ -39,7 +39,7 @@ function PromoCode({ onApply }) {
           onChange={handleChange}
           className="bm-promo__input"
         />
-        <button onClick={handleApply} className="bm-promo__btn">
+        <button onClick={handleApply} className="bm-promo__button">
           Apply
         </button>
       </div>

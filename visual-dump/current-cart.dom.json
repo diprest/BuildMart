@@ -1,0 +1,182 @@
+[
+  {
+    "selector": "header",
+    "text": "BM\nBuildMart\nProducts\nCategories\nDeals\nAbout",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 81
+    },
+    "styles": {
+      "display": "block",
+      "position": "sticky",
+      "width": "1440px",
+      "height": "81px",
+      "margin": "0px",
+      "padding": "0px",
+      "gap": "normal",
+      "color": "rgb(107, 114, 128)",
+      "backgroundColor": "rgb(255, 255, 255)",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "lineHeight": "24px",
+      "border": "",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "gridTemplateColumns": "none",
+      "justifyContent": "normal",
+      "alignItems": "normal"
+    }
+  },
+  {
+    "selector": ".bm-header",
+    "text": "BM\nBuildMart\nProducts\nCategories\nDeals\nAbout",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 81
+    },
+    "styles": {
+      "display": "block",
+      "position": "sticky",
+      "width": "1440px",
+      "height": "81px",
+      "margin": "0px",
+      "padding": "0px",
+      "gap": "normal",
+      "color": "rgb(107, 114, 128)",
+      "backgroundColor": "rgb(255, 255, 255)",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "lineHeight": "24px",
+      "border": "",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "gridTemplateColumns": "none",
+      "justifyContent": "normal",
+      "alignItems": "normal"
+    }
+  },
+  {
+    "selector": ".bm-cart-page",
+    "text": "Your Cart is Empty\n\nStart shopping to add items to your cart\n\nBrowse Products",
+    "rect": {
+      "x": 0,
+      "y": 81,
+      "width": 1440,
+      "height": 697
+    },
+    "styles": {
+      "display": "block",
+      "position": "static",
+      "width": "1440px",
+      "height": "696.828px",
+      "margin": "0px",
+      "padding": "0px",
+      "gap": "normal",
+      "color": "rgb(107, 114, 128)",
+      "backgroundColor": "rgb(255, 255, 255)",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "lineHeight": "24px",
+      "border": "0px none rgb(107, 114, 128)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "gridTemplateColumns": "none",
+      "justifyContent": "normal",
+      "alignItems": "normal"
+    }
+  },
+  {
+    "selector": ".bm-cart-container",
+    "text": "Your Cart is Empty\n\nStart shopping to add items to your cart\n\nBrowse Products",
+    "rect": {
+      "x": 80,
+      "y": 81,
+      "width": 1280,
+      "height": 430
+    },
+    "styles": {
+      "display": "block",
+      "position": "static",
+      "width": "1280px",
+      "height": "430px",
+      "margin": "0px 80px",
+      "padding": "64px 32px",
+      "gap": "normal",
+      "color": "rgb(107, 114, 128)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "lineHeight": "24px",
+      "border": "0px none rgb(107, 114, 128)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "gridTemplateColumns": "none",
+      "justifyContent": "normal",
+      "alignItems": "normal"
+    }
+  },
+  {
+    "selector": "footer",
+    "text": "BuildMart\n\nYour trusted source for premium building materials and construction supplies since 1995.\n\nQuick Links\nAbout Us\nProducts\nDelivery Info\nReturns Policy\nCustomer Service\nContact Us\nFAQs\nShippin",
+    "rect": {
+      "x": 0,
+      "y": 778,
+      "width": 1440,
+      "height": 422
+    },
+    "styles": {
+      "display": "block",
+      "position": "static",
+      "width": "1440px",
+      "height": "422.172px",
+      "margin": "0px",
+      "padding": "0px",
+      "gap": "normal",
+      "color": "rgb(209, 213, 219)",
+      "backgroundColor": "rgb(17, 24, 39)",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "lineHeight": "24px",
+      "border": "0px none rgb(209, 213, 219)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "gridTemplateColumns": "none",
+      "justifyContent": "normal",
+      "alignItems": "normal"
+    }
+  },
+  {
+    "selector": ".bm-footer",
+    "text": "BuildMart\n\nYour trusted source for premium building materials and construction supplies since 1995.\n\nQuick Links\nAbout Us\nProducts\nDelivery Info\nReturns Policy\nCustomer Service\nContact Us\nFAQs\nShippin",
+    "rect": {
+      "x": 0,
+      "y": 778,
+      "width": 1440,
+      "height": 422
+    },
+    "styles": {
+      "display": "block",
+      "position": "static",
+      "width": "1440px",
+      "height": "422.172px",
+      "margin": "0px",
+      "padding": "0px",
+      "gap": "normal",
+      "color": "rgb(209, 213, 219)",
+      "backgroundColor": "rgb(17, 24, 39)",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "lineHeight": "24px",
+      "border": "0px none rgb(209, 213, 219)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "gridTemplateColumns": "none",
+      "justifyContent": "normal",
+      "alignItems": "normal"
+    }
+  }
+]
